@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{FD8B0892-5E76-4A49-A594-4B2256DD5655}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ProjectBeom</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AbstractFactory.h" />
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="BigExplosion.h" />
+    <ClInclude Include="Blood.h" />
+    <ClInclude Include="Bomb.h" />
+    <ClInclude Include="Boost.h" />
+    <ClInclude Include="Boss.h" />
+    <ClInclude Include="BossAttEndState.h" />
+    <ClInclude Include="BossAttState.h" />
+    <ClInclude Include="BossDieState.h" />
+    <ClInclude Include="BossIdleState.h" />
+    <ClInclude Include="BossPrepareState.h" />
+    <ClInclude Include="Camel.h" />
+    <ClInclude Include="CamelCannon.h" />
+    <ClInclude Include="CamelCannonBullet.h" />
+    <ClInclude Include="CamelIdleState.h" />
+    <ClInclude Include="CamelRestState.h" />
+    <ClInclude Include="CamelRunState.h" />
+    <ClInclude Include="CameraManager.h" />
+    <ClInclude Include="Characters.h" />
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="Constant.h" />
+    <ClInclude Include="CreditScene.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="DummyObject.h" />
+    <ClInclude Include="Enum.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="Extern.h" />
+    <ClInclude Include="Fade.h" />
+    <ClInclude Include="FileManager.h" />
+    <ClInclude Include="Fire.h" />
+    <ClInclude Include="FireCollider.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="FrameManager.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Functor.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GdiImage.h" />
+    <ClInclude Include="GdiManager.h" />
+    <ClInclude Include="GdiPlusImage.h" />
+    <ClInclude Include="GdiPlusManager.h" />
+    <ClInclude Include="GranadeExplosion.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="KeyManager.h" />
+    <ClInclude Include="KnifeBullet.h" />
+    <ClInclude Include="LeftWing.h" />
+    <ClInclude Include="LogoScene.h" />
+    <ClInclude Include="MachinegunBullet.h" />
+    <ClInclude Include="MachinegunEffect.h" />
+    <ClInclude Include="Macro.h" />
+    <ClInclude Include="Maingame.h" />
+    <ClInclude Include="MainMenuScene.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="MediumExplosion.h" />
+    <ClInclude Include="MouseManager.h" />
+    <ClInclude Include="Number.h" />
+    <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="PistolBullet.h" />
+    <ClInclude Include="PistolEffect.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerBottom.h" />
+    <ClInclude Include="PlayerBottomBombAttState.h" />
+    <ClInclude Include="PlayerBottomDownAttState.h" />
+    <ClInclude Include="PlayerBottomDownMoveState.h" />
+    <ClInclude Include="PlayerBottomDownState.h" />
+    <ClInclude Include="PlayerBottomJumpRunState.h" />
+    <ClInclude Include="PlayerBottomJumpState.h" />
+    <ClInclude Include="PlayerBottomKnifeAttState.h" />
+    <ClInclude Include="PlayerBottomRunState.h" />
+    <ClInclude Include="PlayerTop.h" />
+    <ClInclude Include="PlayerTopBombAttState.h" />
+    <ClInclude Include="PlayerTopDiagonalDownToStandState.h" />
+    <ClInclude Include="PlayerTopDiagonalStandToDownState.h" />
+    <ClInclude Include="PlayerTopDiagonalStandToUpState.h" />
+    <ClInclude Include="PlayerTopDiagonalUpToStandState.h" />
+    <ClInclude Include="PlayerTopDownMoveState.h" />
+    <ClInclude Include="PlayerTopDownState.h" />
+    <ClInclude Include="PlayerTopJumpAttState.h" />
+    <ClInclude Include="PlayerTopJumpBombAttState.h" />
+    <ClInclude Include="PlayerTopJumpRunState.h" />
+    <ClInclude Include="PlayerTopJumpState.h" />
+    <ClInclude Include="PlayerTopKnifeAttState.h" />
+    <ClInclude Include="PlayerTopRunJumpAttState.h" />
+    <ClInclude Include="PlayerTopRunState.h" />
+    <ClInclude Include="PlayerTopStandAttState.h" />
+    <ClInclude Include="PlayerTopStandState.h" />
+    <ClInclude Include="PlayerTopUnderAttState.h" />
+    <ClInclude Include="PlayerTopUnderState.h" />
+    <ClInclude Include="PlayerTopUpAttState.h" />
+    <ClInclude Include="PlayerTopUpState.h" />
+    <ClInclude Include="Prisoner.h" />
+    <ClInclude Include="PrisonerBindState.h" />
+    <ClInclude Include="PrisonerByeState.h" />
+    <ClInclude Include="PrisonerFlyState.h" />
+    <ClInclude Include="PrisonerItemState.h" />
+    <ClInclude Include="PrisonerRunoutState.h" />
+    <ClInclude Include="PrisonerRunState.h" />
+    <ClInclude Include="PrisonerUndoState.h" />
+    <ClInclude Include="Pro.h" />
+    <ClInclude Include="Project_Beom.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RightWing.h" />
+    <ClInclude Include="Sarubia.h" />
+    <ClInclude Include="SarubiaAttState.h" />
+    <ClInclude Include="SarubiaDieState.h" />
+    <ClInclude Include="SarubiaIdleState.h" />
+    <ClInclude Include="SarubiaRunState.h" />
+    <ClInclude Include="SaruBullet.h" />
+    <ClInclude Include="SaruChip.h" />
+    <ClInclude Include="SaruExplosion.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="PlayerBottomStandState.h" />
+    <ClInclude Include="SelectScene.h" />
+    <ClInclude Include="SelectScreen.h" />
+    <ClInclude Include="SelectUI.h" />
+    <ClInclude Include="Slot.h" />
+    <ClInclude Include="Smog.h" />
+    <ClInclude Include="Soldier.h" />
+    <ClInclude Include="SoldierBomb.h" />
+    <ClInclude Include="SoldierBombAttState.h" />
+    <ClInclude Include="SoldierDieState.h" />
+    <ClInclude Include="SoldierIdleState.h" />
+    <ClInclude Include="SoldierKnifeState.h" />
+    <ClInclude Include="SoldierRunState.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="SpriteDeco.h" />
+    <ClInclude Include="StageScene.h" />
+    <ClInclude Include="StageUI.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StaticDeco.h" />
+    <ClInclude Include="Struct.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="Tank.h" />
+    <ClInclude Include="TankAttState.h" />
+    <ClInclude Include="TankBullet.h" />
+    <ClInclude Include="TankDieState.h" />
+    <ClInclude Include="TankEffect.h" />
+    <ClInclude Include="TankIdleState.h" />
+    <ClInclude Include="TankPrepareState.h" />
+    <ClInclude Include="TankRunState.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TestScene.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="TimerManager.h" />
+    <ClInclude Include="Toma.h" />
+    <ClInclude Include="TomaAttState.h" />
+    <ClInclude Include="TomaBullet.h" />
+    <ClInclude Include="TomaIdleState.h" />
+    <ClInclude Include="TomaRunState.h" />
+    <ClInclude Include="ToolScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Background.cpp" />
+    <ClCompile Include="BigExplosion.cpp" />
+    <ClCompile Include="Blood.cpp" />
+    <ClCompile Include="Bomb.cpp" />
+    <ClCompile Include="Boost.cpp" />
+    <ClCompile Include="Boss.cpp" />
+    <ClCompile Include="BossAttEndState.cpp" />
+    <ClCompile Include="BossAttState.cpp" />
+    <ClCompile Include="BossDieState.cpp" />
+    <ClCompile Include="BossIdleState.cpp" />
+    <ClCompile Include="BossPrepareState.cpp" />
+    <ClCompile Include="Camel.cpp" />
+    <ClCompile Include="CamelCannon.cpp" />
+    <ClCompile Include="CamelCannonBullet.cpp" />
+    <ClCompile Include="CamelIdleState.cpp" />
+    <ClCompile Include="CamelRestState.cpp" />
+    <ClCompile Include="CamelRunState.cpp" />
+    <ClCompile Include="CameraManager.cpp" />
+    <ClCompile Include="Characters.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="CreditScene.cpp" />
+    <ClCompile Include="DummyObject.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="Fade.cpp" />
+    <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="FireCollider.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="FrameManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GdiImage.cpp" />
+    <ClCompile Include="GdiManager.cpp" />
+    <ClCompile Include="GdiPlusImage.cpp" />
+    <ClCompile Include="GdiPlusManager.cpp" />
+    <ClCompile Include="GranadeExplosion.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="KeyManager.cpp" />
+    <ClCompile Include="KnifeBullet.cpp" />
+    <ClCompile Include="LeftWing.cpp" />
+    <ClCompile Include="LogoScene.cpp" />
+    <ClCompile Include="MachinegunBullet.cpp" />
+    <ClCompile Include="MachinegunEffect.cpp" />
+    <ClCompile Include="Maingame.cpp" />
+    <ClCompile Include="MainMenuScene.cpp" />
+    <ClCompile Include="MediumExplosion.cpp" />
+    <ClCompile Include="MouseManager.cpp" />
+    <ClCompile Include="Number.cpp" />
+    <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PistolBullet.cpp" />
+    <ClCompile Include="PistolEffect.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerBottom.cpp" />
+    <ClCompile Include="PlayerBottomBombAttState.cpp" />
+    <ClCompile Include="PlayerBottomDownAttState.cpp" />
+    <ClCompile Include="PlayerBottomDownMoveState.cpp" />
+    <ClCompile Include="PlayerBottomDownState.cpp" />
+    <ClCompile Include="PlayerBottomJumpRunState.cpp" />
+    <ClCompile Include="PlayerBottomJumpState.cpp" />
+    <ClCompile Include="PlayerBottomKnifeAttState.cpp" />
+    <ClCompile Include="PlayerBottomRunState.cpp" />
+    <ClCompile Include="PlayerTop.cpp" />
+    <ClCompile Include="PlayerTopBombAttState.cpp" />
+    <ClCompile Include="PlayerTopDiagonalDownToStandState.cpp" />
+    <ClCompile Include="PlayerTopDiagonalStandToDownState.cpp" />
+    <ClCompile Include="PlayerTopDiagonalStandToUpState.cpp" />
+    <ClCompile Include="PlayerTopDiagonalUpToStandState.cpp" />
+    <ClCompile Include="PlayerTopDownMoveState.cpp" />
+    <ClCompile Include="PlayerTopDownState.cpp" />
+    <ClCompile Include="PlayerTopJumpAttState.cpp" />
+    <ClCompile Include="PlayerTopJumpBombAttState.cpp" />
+    <ClCompile Include="PlayerTopJumpRunState.cpp" />
+    <ClCompile Include="PlayerTopJumpState.cpp" />
+    <ClCompile Include="PlayerTopKnifeAttState.cpp" />
+    <ClCompile Include="PlayerTopRunJumpAttState.cpp" />
+    <ClCompile Include="PlayerTopRunState.cpp" />
+    <ClCompile Include="PlayerTopStandAttState.cpp" />
+    <ClCompile Include="PlayerTopStandState.cpp" />
+    <ClCompile Include="PlayerTopUnderAttState.cpp" />
+    <ClCompile Include="PlayerTopUnderState.cpp" />
+    <ClCompile Include="PlayerTopUpAttState.cpp" />
+    <ClCompile Include="PlayerTopUpState.cpp" />
+    <ClCompile Include="Prisoner.cpp" />
+    <ClCompile Include="PrisonerBindState.cpp" />
+    <ClCompile Include="PrisonerByeState.cpp" />
+    <ClCompile Include="PrisonerFlyState.cpp" />
+    <ClCompile Include="PrisonerItemState.cpp" />
+    <ClCompile Include="PrisonerRunoutState.cpp" />
+    <ClCompile Include="PrisonerRunState.cpp" />
+    <ClCompile Include="PrisonerUndoState.cpp" />
+    <ClCompile Include="Pro.cpp" />
+    <ClCompile Include="Project_Beom.cpp" />
+    <ClCompile Include="RightWing.cpp" />
+    <ClCompile Include="Sarubia.cpp" />
+    <ClCompile Include="SarubiaAttState.cpp" />
+    <ClCompile Include="SarubiaDieState.cpp" />
+    <ClCompile Include="SarubiaIdleState.cpp" />
+    <ClCompile Include="SarubiaRunState.cpp" />
+    <ClCompile Include="SaruBullet.cpp" />
+    <ClCompile Include="SaruChip.cpp" />
+    <ClCompile Include="SaruExplosion.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="PlayerBottomStandState.cpp" />
+    <ClCompile Include="SelectScene.cpp" />
+    <ClCompile Include="SelectScreen.cpp" />
+    <ClCompile Include="SelectUI.cpp" />
+    <ClCompile Include="Slot.cpp" />
+    <ClCompile Include="Smog.cpp" />
+    <ClCompile Include="Soldier.cpp" />
+    <ClCompile Include="SoldierBomb.cpp" />
+    <ClCompile Include="SoldierBombAttState.cpp" />
+    <ClCompile Include="SoldierDieState.cpp" />
+    <ClCompile Include="SoldierIdleState.cpp" />
+    <ClCompile Include="SoldierKnifeState.cpp" />
+    <ClCompile Include="SoldierRunState.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="SpriteDeco.cpp" />
+    <ClCompile Include="StageScene.cpp" />
+    <ClCompile Include="StageUI.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="StaticDeco.cpp" />
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="Tank.cpp" />
+    <ClCompile Include="TankAttState.cpp" />
+    <ClCompile Include="TankBullet.cpp" />
+    <ClCompile Include="TankDieState.cpp" />
+    <ClCompile Include="TankEffect.cpp" />
+    <ClCompile Include="TankIdleState.cpp" />
+    <ClCompile Include="TankPrepareState.cpp" />
+    <ClCompile Include="TankRunState.cpp" />
+    <ClCompile Include="TestScene.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="TimerManager.cpp" />
+    <ClCompile Include="Toma.cpp" />
+    <ClCompile Include="TomaAttState.cpp" />
+    <ClCompile Include="TomaBullet.cpp" />
+    <ClCompile Include="TomaIdleState.cpp" />
+    <ClCompile Include="TomaRunState.cpp" />
+    <ClCompile Include="ToolScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project_Beom.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Project_Beom.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
